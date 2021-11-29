@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/login.css">
+    <link rel="stylesheet" href="/static/css/trans_history.css">
+    <title>user transfer history</title>
+</head>
+<body>
+    <div class="history-box">
+        
+        <div class="history-side">
+            
+            {% for transfer in transfer %}
+            <div class="history-detail">
+                <div class=" all debit">debit</div>
+                <div class=" all name">{{transfer.reciver_name}}</div>
+                <div class=" all amount">&dollar;{{transfer.amount}}</div>
+                <div class=" all desc">{{transfer.desc}}</div>
+                <div class=" all date">{{transfer.date}}</div>
+            </div>
+            {% endfor %}
+            <a class="goto" href="{%url 'dashboard'%}">go to dashbord</a>
+        </div>
+    </div>
+</body>
+</html>
+
+<style>
+    .goto{
+        color: #232356;
+        box-shadow: 1px 1px 7px 1px #cccccc80;
+        border-radius: 4px;
+        padding: 5px;
+        margin-top: 10px;
+        background: #fff;
+    }
+</style>

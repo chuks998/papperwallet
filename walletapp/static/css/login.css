@@ -1,0 +1,106 @@
+*{
+    font-family: jdIcoMoonFree;
+    font-size: 10px;
+    text-decoration: none;
+    text-transform: capitalize;
+    list-style: none;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    scroll-behavior: smooth;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(#33333380, #33333380), url('/static/media/pexels-anna-nekrashevich-6802049.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form-div{
+    height: 50%;
+    width: 50%;
+    box-shadow: 2px 2px 7px 1px #11111180;
+    border-radius: 5px;
+    background: #232356dc;
+}
+.welcome{
+    width: 100%;
+    padding-top: 5px;
+    color: #fff;
+    font-size: 200%;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+}
+form{
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+form input{
+    width: 60%;
+    height: 40px;
+    padding: 5px;
+}
+#btn{
+    background: #158515;
+    border: none;
+    width: 30%;
+    color: #fff;
+    font-size: 120%;
+    letter-spacing: 1px;
+}
+.form-div small{
+    color: #fff;
+    font-size: 150%;
+    margin-left: 5px;
+}
+.form-div a{
+    color: #158515;
+    font-size: 180%;
+    margin-left: 5px;
+}
+
+@media only screen and (max-width:1024px){
+    
+    .form-div{
+        height: 60%;
+        width: 80%;
+    }
+    .welcome{
+        font-size: 300%;
+    }
+    form input{
+        font-size: 140%;
+    }
+    .form-div a{
+        padding-top: 10px;
+    }
+}
+@media only screen and (max-width:414px){
+    
+    .form-div{
+        height: 60%;
+        width: 90%;
+    }
+    form input{
+        width: 80%;
+        text-transform: initial;
+    }
+}
+@media only screen and (max-width:411px){
+    
+    .form-div{
+        height: 60%;
+        width: 95%;
+    }
+}

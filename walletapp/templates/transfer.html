@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/login.css">
+    <link rel="stylesheet" href="/static/css/transfer.css">
+    <title>transfer forms</title>
+</head>
+<body>
+    <div>
+        <form action="{% url 'make_transfer' %}" method="post">
+            {% csrf_token %}
+            <input type="text" placeholder="username" name="username">
+            <input type="text" placeholder="reciver name" name="reciver_name">
+            <input type="text" placeholder="account number" name="account_number">
+            <input type="number" placeholder="amount" min="1" max="100000" name="amount">
+            <input type="text" placeholder="description" name="desc">
+            <input type="submit" value="proceed" id="btn">
+        </form>
+    </div>
+</body>
+</html>

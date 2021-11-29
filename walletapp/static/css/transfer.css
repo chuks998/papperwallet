@@ -1,0 +1,18 @@
+body{
+    background: #f9f9f9;
+}
+div{
+    width: 70%;
+    height: 80vh;
+}
+input{
+    border: #cccccc80;
+    text-transform: capitalize;
+}
+@media only screen and (max-width:414px){
+    div{
+        width: 90%;
+        box-shadow: 1px 1px 7px 1px #cccccc80;
+    }
+    input{text-transform: capitalize;}
+}

@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="login or create an account with paper wallet. A secure and safe way to send and recive money">
+    <link rel="stylesheet" href="/static/css/login.css">
+    <title>login to paper wallet|PaperWallet</title>
+</head>
+<body>
+    <div class="form-div">
+        <div class="welcome">trust wallet</div>
+        <form action="{% url 'login' %}" method="post">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="username" aria-placeholder="username">
+            <input type="password" name="password" placeholder="password">
+            <input type="submit" value="login" id="btn">
+        </form>
+        <small>don't have an account?</small> <br>
+        <a href="#">create an account</a>
+    </div>
+</body>
+</html>

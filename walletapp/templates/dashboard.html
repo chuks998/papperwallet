@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/login.css">
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+    <title>username account control center</title>
+</head>
+<body>
+    <header>
+        <div class="brand">trustwallet. dashboard</div>
+    </header>
+    <nav>
+        <ul>
+            
+            <li>
+                <a href="#">
+                    <div class="icons-box">
+                        deposit
+                        <img src="/static/media/deposite.png" alt="deposite fund">
+                    </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="{% url 'make_transfer' %}">
+                    <div class="icons-box i">
+                        transfer
+                        <img src="/static/media/transfer.png" alt="transfer fund">
+                    </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="{% url 'transfer' %}">
+                    <div class="icons-box">
+                        transfer history
+                        <img src="/static/media/history.png" alt="history">
+                    </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="{% url 'contact' %}">
+                    <div class="icons-box">
+                        contact us
+                        <img src="/static/media/customer care.png" alt="contact us">
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="who">welcome {{user.username}}money</div>
+    <div class="acct-detail">
+        <div class="child bal">&dollar;{{user.accountdetail.account_balance}}</div>
+        <div class="child acct-num">{{user.first_name}} {{user.last_name}} {{user.accountdetail.account_number}} savings account</div>
+    </div>
+</body>
+</html>
